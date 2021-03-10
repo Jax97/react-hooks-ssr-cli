@@ -1,0 +1,44 @@
+{
+  "name": "react-hooks-ssr-cli",
+  "version": "1.0.0",
+  "description": "### 客户端配置",
+  "main": "index.js",
+  "scripts": {
+    "preserve": "rm -rf ./dist/*",
+    "serve": "npm-run-all build:* --parallel",
+    "build:client": "webpack --config ./build/webpack.client.js",
+    "build:server": "webpack --config ./build/webpack.server.js",
+    "dev": "nodemon ./dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jax97/react-hooks-ssr-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jax97/react-hooks-ssr-cli/issues"
+  },
+  "homepage": "https://github.com/Jax97/react-hooks-ssr-cli#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/koa": "^2.13.1",
+    "@types/koa-router": "^7.4.1",
+    "@types/koa-static": "^4.0.1",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.2",
+    "babel-loader": "^8.2.2",
+    "koa": "^2.13.1",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0",
+    "webpack-node-externals": "^2.5.2"
+  }
+}
