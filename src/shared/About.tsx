@@ -13,7 +13,7 @@ const About = () => {
   useEffect(() => {
     if (!stateData) {
       axios
-        .get('http://localhost:3000/getData')
+        .get('http://localhost:3000/api/getData')
         .then((res) => {
           dispatch({
             type: 'CHANGE_DATA',
@@ -38,7 +38,7 @@ const About = () => {
 About.loadData = (store: Store): Promise<string> => {
   return new Promise((resolve, reject) => {
     axios
-      .get('http://localhost:3000/getData')
+      .get('http://localhost:3000/api/getData')
       .then((res) => {
         store.dispatch({
           type: 'CHANGE_DATA',

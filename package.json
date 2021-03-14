@@ -7,8 +7,9 @@
     "preserve": "rm -rf ./dist/*",
     "serve": "npm-run-all build:* --parallel",
     "build:client": "webpack --config ./build/webpack.client.js",
-    "build:server": "webpack --config ./build/webpack.server.js",
-    "dev": "nodemon ./dist/app.js"
+    "build:ssr": "webpack --config ./build/webpack.ssr.js",
+    "build:server": "cross-env NODE_ENV=development gulp",
+    "dev": "yarn serve && nodemon ./dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -35,10 +36,14 @@
     "@types/react-router-dom": "^5.1.7",
     "axios": "^0.21.1",
     "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "html-webpack-plugin": "^5.3.1",
     "koa": "^2.13.1",
     "koa-router": "^10.0.0",
     "koa-static": "^5.0.0",
+    "merge2": "^1.4.1",
     "npm-run-all": "^4.1.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -46,6 +51,7 @@
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
+    "typescript": "^4.2.3",
     "webpack": "^5.24.4",
     "webpack-cli": "^4.5.0",
     "webpack-node-externals": "^2.5.2"

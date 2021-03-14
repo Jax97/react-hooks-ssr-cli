@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { createClientStore } from '../shared/store';
 import { Provider } from 'react-redux';
 
-console.log(document.getElementById('root'));
+// console.log(document.getElementById('root'));
 
 ReactDOM.render(
   <Provider store={createClientStore()}>
