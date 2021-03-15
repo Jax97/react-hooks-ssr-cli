@@ -9,6 +9,11 @@ module.exports = {
     path: path.join(__dirname, '../dist/assets'),
     publicPath: '/',
   },
+  // 不会正常exit，导致run-parrell一直等待
+  // watch: true,
+  // watchOptions: {
+  //   ignored: /node_modules/,
+  // },
   module: {
     rules: [
       {

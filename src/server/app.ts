@@ -4,8 +4,6 @@ import staticServe from 'koa-static';
 // import { render } from './utils/ssr';
 import { render } from './utils/ssr';
 
-console.log(render);
-
 const path = require('path');
 const app = new Koa();
 const router = new Router();
