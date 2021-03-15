@@ -11,7 +11,7 @@ const path = require('path');
 const fs = require('fs');
 
 const fileResole = (file: string) => path.resolve(__dirname, file);
-const template = fs.readFileSync(fileResole('assets/index.html'), 'utf-8');
+const template = fs.readFileSync(fileResole('../assets/index.html'), 'utf-8');
 
 // 动态插入js和store函数
 function templating(template: string) {

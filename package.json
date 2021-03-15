@@ -6,10 +6,10 @@
   "scripts": {
     "preserve": "rm -rf ./dist/*",
     "serve": "npm-run-all build:* --parallel",
-    "build:client": "webpack --config ./build/webpack.client.js",
-    "build:ssr": "webpack --config ./build/webpack.ssr.js",
+    "build:client": "webpack --config ./build/webpack.client.js --mode=development",
+    "build:ssr": "webpack --config ./build/webpack.ssr.js --mode=development",
     "build:server": "cross-env NODE_ENV=development gulp",
-    "dev": "yarn serve && nodemon ./dist/app.js"
+    "dev": "nodemon ./dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,8 @@
   "homepage": "https://github.com/Jax97/react-hooks-ssr-cli#readme",
   "devDependencies": {
     "@babel/core": "^7.13.10",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
     "@types/koa": "^2.13.1",
@@ -38,6 +40,8 @@
     "babel-loader": "^8.2.2",
     "cross-env": "^7.0.3",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "html-webpack-plugin": "^5.3.1",
     "koa": "^2.13.1",

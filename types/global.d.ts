@@ -4,6 +4,6 @@
 //   }
 // }
 
-declare interface Window {
-  BACKEND_DATA: any;
-}
+// declare interface Window {
+//   BACKEND_DATA: unkwown;
+// }
